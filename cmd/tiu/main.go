@@ -59,7 +59,7 @@ func main() {
 		panic(err)
 	}
 
-	_, err = w.Commit("Updated terraform to "+*terraformVersion, &git.CommitOptions{
+	_, err = w.Commit("feat: Updated terraform to "+*terraformVersion, &git.CommitOptions{
 		All: true,
 		Author: &object.Signature{
 			Name:  "Philipp Böschen",
