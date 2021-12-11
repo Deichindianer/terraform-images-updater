@@ -31,6 +31,10 @@ func main() {
 		URL: terraformImagesForkURL,
 	})
 
+	if err != nil {
+		panic(err)
+	}
+
 	ciFilePath := path.Join(tmpDir, ".gitlab-ci.yml")
 	ciYamlBytes, err := os.ReadFile(ciFilePath)
 	if err != nil {
